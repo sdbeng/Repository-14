@@ -27,6 +27,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/securedfiles', {
+        templateUrl: 'views/files.html',
+        controller: 'FilesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
