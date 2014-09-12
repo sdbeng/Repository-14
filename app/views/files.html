@@ -1,9 +1,18 @@
 <div class="container">
 	<h1>Files List</h1>
 	<p>Congratulations on taking the plunge! Now, follow the instructions to start uploading your handouts.</p>
-<ul>
-	<li ng-repeat="item in presenters">
-		{{item.name}} | {{item.title}}
-	</li>
-</ul>
+	<h3>Steps</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia aut ad voluptate voluptatem beatae amet itaque commodi, adipisci dolor, quae quam consequuntur id dignissimos voluptatum optio tenetur.</p>
+
+	<div>
+		<label>Search presentations:</label><br>
+		<input type="text" ng-model="search">
+		<br><br>
+		<ul>
+			<li ng-repeat="item in presenters | filter:search" >
+				{{item.name}} | {{item.title}}
+			</li>
+		</ul>
+	</div>
+
 </div>

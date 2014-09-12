@@ -8,23 +8,8 @@
  * Controller of the repo14App
  */
 angular.module('repo14App')
-  .controller('FilesCtrl', function ($scope) {
-    $scope.presenters = [
-      {
-      	"name":"Jon Bon Jovi",
-      	"title":"Innocents song"
-      },
-      {
-      	"name":"Electric Light Orchestra",
-      	"title":"Train to San Francisco"
-      },
-      {
-      	"name":"Jimmy Hendrix",
-      	"title":"Purple Haze"
-      },
-      {
-      	"name":"Yes",
-      	"title":"And You and I"
-      }
-    ];
+  .controller('FilesCtrl', function ($scope,$http) {
+   	$http.get('views/mydata.json').success(function(data) {
+   		$scope.presenters = data;
+   	});
   });
