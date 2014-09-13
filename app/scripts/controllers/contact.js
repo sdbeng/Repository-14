@@ -9,5 +9,9 @@
  */
 angular.module('repo14App')
   .controller('ContactCtrl', function ($scope) {
-    $scope.name = "dani";
+    $scope.contactForm = {};
+
+    $scope.send = function() {
+    	console.log('submit button clicked');
+    };
   });

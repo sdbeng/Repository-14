@@ -1,1 +1,47 @@
 <p>Thanks for keeping in touch.</p>
+
+<!-- start form -->
+<div>
+	<form role="form" name="myForm">
+  <div class="form-group">
+	    <label for="name">Name</label>
+	    <input ng-model="contactForm.name" type="text" name="name" class="form-control"  id="name" placeholder="Enter Name" ng-minlength=3 ng-maxlength=22 ng-pattern="/^[a-zA-Z]+$/" required>
+
+	   <div ng-show="myForm.name.$dirty && myForm.name.$invalid">
+	   		<span ng-show="myForm.name.$error.required">
+	  			There are errors in your entry.
+	  		</span>
+	  		<span ng-show="myForm.name.$error.minlength">
+	  			The min length required is 3.
+	  		</span>
+	  		
+	   </div>
+
+	    	
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="contactForm.email" required>
+
+    <div ng-show="myForm.email.$dirty">
+    	<span ng-show="myForm.email.$error.required">
+    		Your email is required.
+    	</span>
+    	<span ng-show="myForm.email.$error.email">
+    		This is not a valid email.
+    	</span>
+    </div>
+   	
+  </div>
+  
+  
+ <br>
+  <button type="submit" class="btn btn-default" ng-click="send()" ng-disabled="myForm.$invalid">
+  	Send
+  </button>
+</form>
+ {{contactForm}}
+</div>
+<!-- end form -->
+
+<br><br><br><br>
