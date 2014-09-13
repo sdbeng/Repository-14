@@ -87,7 +87,12 @@ body {
     background-color: #78FA89;
   }
 
-
+.css-form textarea.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+.css-form textarea.ng-valid.ng-dirty {
+  background-color: #78FA89;
+}
 
 
 

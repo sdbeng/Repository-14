@@ -9,10 +9,13 @@
 
 	   <div ng-show="myForm.name.$dirty && myForm.name.$invalid">
 	   		<span ng-show="myForm.name.$error.required">
-	  			There are errors in your entry.
+	  			The name is required.
 	  		</span>
 	  		<span ng-show="myForm.name.$error.minlength">
-	  			The min length required is 3.
+	  			The min length required is 3 chars.
+	  		</span>
+	  		<span ng-show="myForm.name.$error.maxlength">
+	  			The max length has to be less than 22 chars.
 	  		</span>
 	  		
 	   </div>
@@ -32,6 +35,27 @@
     	</span>
     </div>
    	
+  </div>
+
+  <!-- textarea start -->
+  <div class="form-group">
+	    <label for="message">Message</label>
+	    <textarea ng-model="contactForm.message" type="text" name="message" class="form-control"  id="message" placeholder="Enter Message" ng-minlength=15 ng-maxlength=150  required></textarea>
+
+	   <div ng-show="myForm.message.$dirty && myForm.message.$invalid">
+	   		<span ng-show="myForm.message.$error.required">
+	  			The message is required.
+	  		</span>
+	  		<span ng-show="myForm.message.$error.minlength">
+	  			The min length of message required is 15 chars.
+	  		</span>
+	  		<span ng-show="myForm.message.$error.maxlength">
+	  			The max length of message is 150 chars.
+	  		</span>
+	  		
+	   </div>
+
+	    	
   </div>
   
   
