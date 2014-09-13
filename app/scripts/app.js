@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
+      .when('/reader', {
+        templateUrl: 'views/reader.html',
+        controller: 'ReaderCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

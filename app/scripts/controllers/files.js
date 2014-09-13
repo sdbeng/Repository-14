@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name repo14App.controller:MainCtrl
+ * @name repo14App.controller:FilesCtrl
  * @description
- * # MainCtrl
+ * # FilesCtrl
  * Controller of the repo14App
  */
 angular.module('repo14App')
